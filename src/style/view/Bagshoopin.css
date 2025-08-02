@@ -1,0 +1,69 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+.main-store-bag{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5rem;
+    background-color: rgb(187, 170, 170);
+}
+.main-store-bag .bag-texto{
+    width: 100%;
+    height: 5rem;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-store-bag .bag-dupli{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+.bag-dupli .bag-items{
+    width: 30rem;
+    height: 100dvh;
+}
+.bag-dupli .bag-logo{
+    width: 40rem;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bag-dupli .bag-logo img{
+    width: 100%;
+    height: auto;
+}
+table{
+    width: 100%;
+    height: auto;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    background-color: white;
+    padding: 1rem;
+}
+table tr{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 2fr 3fr 2fr 2fr;
+}
+table tr td{
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    padding: .5rem 0;
+    border-top: 5px solid red;
+}

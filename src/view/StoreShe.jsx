@@ -1,42 +1,41 @@
 
-import { Link } from 'react-router-dom'
+import She from "../base/She"
 import '../style/view/Store.css'
-import He from '../base/He.js'
-import She from '../base/She.js'
-import Son from '../base/Son.js'
-import { useEffect, useState } from 'react'
+import {useEffect , useState } from "react";
+import { Link } from "react-router-dom";
 
-function Store() {
 
+function StoreShe()   {
     const [carrito, setCarrito] = useState(() => {
-        try {
-            const guardado = localStorage.getItem("micarrito");
-            const parseado = JSON.parse(guardado);
-            return Array.isArray(parseado) ? parseado : [];
-        } catch {
-            return [];
-        }
-    }); 
-
-    useEffect(() => {
-        localStorage.setItem("micarrito", JSON.stringify(carrito));
-    }, [carrito]);
-
-
-    const agregarItem = (item) => {
-        setCarrito(prev => {  /** contenedor del carrito actual */
-            const existente = prev.find(p => p.id === item.id);
-            if (existente) {
-                return prev.map(p => 
-                    p.id === item.id ? { ...p, cantidad: p.cantidad + 1 } : p
-                );
-            } else {
-                return [...prev, { ...item, cantidad: 1 }];
+            try {
+                const guardado = localStorage.getItem("micarrito");
+                const parseado = JSON.parse(guardado);
+                return Array.isArray(parseado) ? parseado : [];
+            } catch {
+                return [];
             }
-        });
-    };
+        }); 
+    
+        useEffect(() => {
+            localStorage.setItem("micarrito", JSON.stringify(carrito));
+        }, [carrito]);
+    
+    
+        const agregarItem = (item) => {
+            setCarrito(prev => {  /** contenedor del carrito actual */
+                const existente = prev.find(p => p.id === item.id);
+                if (existente) {
+                    return prev.map(p => 
+                        p.id === item.id ? { ...p, cantidad: p.cantidad + 1 } : p
+                    );
+                } else {
+                    return [...prev, { ...item, cantidad: 1 }];
+                }
+            });
+        };
 
-    const total = carrito.reduce((acum, item) => acum + item.precio * item.cantidad, 0);
+
+        const total = carrito.reduce((acum, item) => acum + item.precio * item.cantidad, 0);
 
     const totalProductos = Array.isArray(carrito) ? carrito.reduce((acc, item) => acc + (Number(item.cantidad) || 0), 0) : 0;
     
@@ -58,7 +57,7 @@ function Store() {
         }
     };  
 
-    return(
+    return (
         <>
             <main>
                 <div className="store-submain">
@@ -135,32 +134,7 @@ function Store() {
 
                     <section id='#store/he'>
                         <div className="section-texto">
-                            <p>Hombres</p>
-                        </div>
-                        <div className="section-productos">
-                            {He.map((item,index) => (
-                                <div className="box" key={index}>
-                                    <div className="box-img">
-                                        <img src={item.url} alt={item.nombre} />
-                                    </div>
-                                    <div className="box-descripcion">
-                                        <div className="box-descrip">
-                                            <p>{item.nombre}</p>
-                                            <span>{item.precio.toFixed(2)}</span>
-                                        </div>
-                                        <div className="box-btn">
-                                            <button onClick={() => agregarItem(item)}>Agregar</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </section>
-
-
-                    <section>
-                        <div className="section-texto">
-                        <p>Damas</p>
+                            <p>Mujeres</p>
                         </div>
                         <div className="section-productos">
                             {She.map((item,index) => (
@@ -181,36 +155,9 @@ function Store() {
                             ))}
                         </div>
                     </section>
-
-
-                    <section>
-                        <div className="section-texto">
-                            <p>Niños</p>
-                        </div>
-                        <div className="section-productos">
-                            {Son.map((item,index) => (
-                                <div className="box" key={index}>
-                                    <div className="box-img">
-                                        <img src={item.url} alt={item.nombre} />
-                                    </div>
-                                    <div className="box-descripcion">
-                                        <div className="box-descrip">
-                                            <p>{item.nombre}</p>
-                                            <span>{item.precio.toFixed(2)}</span>
-                                        </div>
-                                        <div className="box-btn">
-                                            <button onClick={() => agregarItem(item)}>Agregar</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </section>
-
-
                 </div>
             </main>
         </>
     )
 }
-export default Store
+export default StoreShe

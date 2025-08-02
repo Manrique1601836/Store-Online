@@ -7,13 +7,6 @@ function Home() {
         return datoGuardado !== null ? Number(datoGuardado) : 0
     })
 
-    
-   /*
-    const [dato, setDato] = useState(() => {
-        const datoGuardado = localStore.getItem("contador")
-        return datoGuardado !== null ? number(datoGuardado)
-    })
-   */ 
 
     const [letras, setLetra] = useState(() => {
         const textoGuardada = localStorage.getItem("letraGuardada")

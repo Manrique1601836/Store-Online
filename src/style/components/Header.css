@@ -95,7 +95,7 @@ header{
     width: 100%;
     height: 100%;
 }
-.header .navar .menu nav ul li ul li .link{
+.header .navar .menu nav ul li ul li .sublink{
     display: grid;
     place-items: center;
     width: 100%;

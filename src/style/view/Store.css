@@ -175,7 +175,7 @@ section .section-texto p{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     align-items: center;
-    margin-left: 10rem;
+    justify-content: center;
 }
 section .section-productos{
     display: flex;

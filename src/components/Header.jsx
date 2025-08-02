@@ -38,18 +38,7 @@ function Header() {
                             <nav>
                                 <ul>
                                     <li>
-                                        <Link to="/" className="link">Home</Link>
-                                        <ul>
-                                            <li>
-                                                <Link to="/" className="sublink">sub item</Link>
-                                            </li>
-                                            <li>
-                                                <Link to="/" className="sublink">sub item</Link>
-                                            </li>
-                                            <li>
-                                                <Link to="/" className="sublink">sub item</Link>
-                                            </li>
-                                        </ul>
+                                        <Link to="/" className="link">Home</Link>                                 
                                     </li>
                                     <li>
                                         <Link to="/about" className="link">About</Link>
@@ -58,13 +47,13 @@ function Header() {
                                         <Link to="/store" className="link">Store</Link>
                                         <ul>
                                             <li>
-                                                <Link to="/store/he" className="sublink">sub Store</Link>
+                                                <Link to="/store/he" className="sublink">He</Link>
                                             </li>
                                             <li>
-                                                <Link to="/store/she" className="sublink">sub Store</Link>
+                                                <Link to="/store/she" className="sublink">She</Link>
                                             </li>
                                             <li>
-                                                <Link to="/store/son" className="sublink">sub Store</Link>
+                                                <Link to="/store/son" className="sublink">Son</Link>
                                             </li>
                                         </ul>
                                     </li>
