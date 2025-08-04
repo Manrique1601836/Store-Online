@@ -1,0 +1,96 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+.main-about{
+    width: 100%;
+    height: 100%;
+}
+.about-one{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+.about-one .about-texto{
+    width: 50%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about-one .about-texto p{
+    width: 50rem;
+    height: auto;
+    font-size: 1.2rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.about-one .about-imagen{
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-one .about-imagen img{
+    width: 30rem;
+    height: auto;
+}
+.about-two{
+    width: 100%;
+    height: auto;
+    background-color: black;
+}
+.two-img{
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    padding: 5rem 1.5rem;
+}
+.two-img img{
+    flex: 1 1 200px;
+}
+@media screen and (max-width:1000px) {
+
+    body{
+        width: 100%;
+        overflow-x: hidden;
+    }
+    .about-one {
+        gap: 2rem;
+    }
+    
+    .about-one .about-texto{
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }   
+    .about-one .about-imagen{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .about-one .about-image img{
+        width: 80%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+}

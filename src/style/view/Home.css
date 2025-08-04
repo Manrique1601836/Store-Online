@@ -1,0 +1,24 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+.main-home{
+    width: 100%;
+    height: 100dvh;
+    background-image: url(../../img/imagenhome.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.main-home p{
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    color: whitesmoke;
+    font-weight: 800;
+    font-size: 3rem;
+    font-family: cursive;
+}
